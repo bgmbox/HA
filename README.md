@@ -1,5 +1,5 @@
 # Hide Advancements
 
-This plugins just hide the advancements message
+This plugin only hides player advancement messages
 
  - 1.12 Plugin
