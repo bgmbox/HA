@@ -18,7 +18,9 @@ public class HideADMain extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {}
 
-    private void hide(World world) { world.setGameRuleValue("announceAdvancements", "false"); }
+    private void hide(World world) {
+        world.setGameRuleValue("announceAdvancements", "false");
+    }
 
     @EventHandler(priority=EventPriority.MONITOR)
     public void onWorldLoad(WorldLoadEvent event) {
