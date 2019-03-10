@@ -1,5 +1,5 @@
 name: HA
-author: Braeh Network
+author: Prodigy4532
 version: 1.0.0
 load: STARTUP
 main: com.braeh.HA.HideADMain
