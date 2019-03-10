@@ -11,31 +11,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class HideADMain extends JavaPlugin implements Listener {
 
-    public void onEnable()
-    {
-        PluginDescriptionFile plugin = getDescription();
-        Bukkit.getConsoleSender().sendMessage("\u00A7e-=-=-=-=-=-=-=-=-=-=-=-=-");
-        Bukkit.getConsoleSender().sendMessage("\u00A7aHA has been enabled!");
-        Bukkit.getConsoleSender().sendMessage("\u00A73Version: " + plugin.getVersion());
-        Bukkit.getConsoleSender().sendMessage("\u00A7e-=-=-=-=-=-=-=-=-=-=-=-=-");
-
+    public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
     }
 
     @Override
-    public void onDisable()
-    {
-        PluginDescriptionFile plugin = getDescription();
-        Bukkit.getConsoleSender().sendMessage("\u00A7e-=-=-=-=-=-=-=-=-=-=-=-=-");
-        Bukkit.getConsoleSender().sendMessage("\u00A7aHA has been disabled!");
-        Bukkit.getConsoleSender().sendMessage("\u00A73Version: " + plugin.getVersion());
-        Bukkit.getConsoleSender().sendMessage("\u00A7e-=-=-=-=-=-=-=-=-=-=-=-=-");
-    }
+    public void onDisable() {}
+
     private void hide(World world) { world.setGameRuleValue("announceAdvancements", "false"); }
 
     @EventHandler(priority=EventPriority.MONITOR)
-    public void onWorldLoad(WorldLoadEvent event)
-    {
+    public void onWorldLoad(WorldLoadEvent event) {
         hide(event.getWorld());
     }
 }
