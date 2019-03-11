@@ -9,7 +9,7 @@
     <groupId>com.braeh</groupId>
     <artifactId>HA</artifactId>
     <version>1.12.2-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <repositories>
         <repository>
